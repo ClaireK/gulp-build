@@ -1,0 +1,44 @@
+@import "includes/normalize";
+@import "includes/mixins";
+@import "includes/variables";
+
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: DimGrey;
+	color: 		white;
+	text-align: center;
+	font-family: Arial,"Helvetica Neue",Helvetica,sans-serif;
+}
+
+.site__wrapper {
+	width: 		90%;
+	margin: 	0 auto;
+	text-align: left;
+}
+
+.btn {
+	color: white;
+}
+
+button {
+
+	@extend .btn;
+
+	background: red;
+	transition: all 0.5s;
+
+	@include round(5px);
+
+	&:hover {
+		@include round(0px);
+		color: purple;
+	}
+
+	@media only screen and (min-width : $bp-desktop) {
+		
+	}
+}
